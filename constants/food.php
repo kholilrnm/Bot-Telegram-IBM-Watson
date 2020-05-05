@@ -1,6 +1,9 @@
 <?php
 
     $food = [
-        'pizza', '',
-        '', '',
+        'pizza', 'Noodles',
+        'Hamburgers', 'Sandwiches',
+        'Stews','eggs',
+        'Pies','rice',
+        'hotdog','seafood'
     ];
