@@ -1,9 +1,9 @@
 <?php
 
-function getMessage($food, $score) {
+function getMessage($result, $score) {
 
     $message = "";
-    $message .= "Makanan tersebut adalah " . $food . PHP_EOL;
+    $message .= "Makanan tersebut adalah " . $result . PHP_EOL;
     $message .= "Akurasi " . $score*100 . "%";
     
     

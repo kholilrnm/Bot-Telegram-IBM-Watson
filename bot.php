@@ -12,7 +12,7 @@ date_default_timezone_set('Asia/Jakarta');
 
 $configs = [
     "telegram" => [
-        "token" => file_get_contents("private/TOKEN.txt")
+        "token" => file_get_contents("private/BOT_TOKEN.txt")
     ]
 ];
 
@@ -31,9 +31,10 @@ $botman->hears("/start", function (BotMan $bot) {
 
 $botman->hears("/cek {url}", function (BotMan $bot, $url){
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/functions/IBM_API.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/functions/getter.php';
 
     $classification = classifyImage($url);
-    $message = getMessage($classification->food, $classification->score);
+    $message = getMessage($classification->result, $classification->score);
     $bot->reply($message);
 });
 

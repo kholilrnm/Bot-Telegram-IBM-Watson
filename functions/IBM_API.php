@@ -25,26 +25,26 @@
     
     function classifyImage($url)
     {
-        global $food;
         $response = http_request('https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/a1aacfa3-bfa7-4253-9eb8-e34bfaf1fcb3/v3/classify?url=' . $url . '&version=2018-03-19');
         $data = json_decode($response);
         $extraction = $data->images[0]->classifiers[0]->classes;
-    
+
+        global $food;
         $i = 0;
         while($i < count($extraction)) {
             if (in_array($extraction[$i]->class, $food)) {
-                $food = $extraction[$i]->class;
+                $result = $extraction[$i]->class;
                 $score = $extraction[$i]->score;
             break;
             } else {
-                $food = "Bukan Makanan";
+                $result = "Bukan Makanan";
                 $score = $extraction[$i]->score;
             }
             $i++;
         }
 
         $classification = [
-            'food'    => $food,
+            'result'    => $result,
             'score'     => $score
         ];
     
