@@ -1,6 +1,6 @@
 <?php
 
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/BOT-Telegram-IBM-Watson/constants/food.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/constants/food.php';
 
     function http_request($url)
     {

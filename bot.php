@@ -5,7 +5,7 @@ use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
 use BotMan\Drivers\Telegram\TelegramDriver;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/BOT-Telegram-IBM-Watson/vendor/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/vendor/autoload.php';
 
 
 date_default_timezone_set('Asia/Jakarta');
@@ -30,7 +30,7 @@ $botman->hears("/start", function (BotMan $bot) {
 });
 
 $botman->hears("/cek {url}", function (BotMan $bot, $url){
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/BOT-Telegram-IBMWatson-Cat-Dog-Recognition/functions/IBM_API.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/functions/IBM_API.php';
 
     $classification = classifyImage($url);
     $message = getMessage($classification->food, $classification->score);
