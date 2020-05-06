@@ -31,10 +31,12 @@ $botman->hears("/start", function (BotMan $bot) {
 
 $botman->hears("/cek {url}", function (BotMan $bot, $url){
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/functions/IBM_API.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/functions/getter.php';
 
     $classification = classifyImage($url);
-    $message = getMessage($classification->result, $classification->score);
+
+    $message = "";
+    $message .= "Makanan tersebut adalah " . $classification->result . PHP_EOL;
+    $message .= "Akurasi " . $classification->score*100 . "%";
     $bot->reply($message);
 });
 

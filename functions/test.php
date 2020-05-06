@@ -22,7 +22,7 @@
         return $result;
     }
 
-    $response = http_request('https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/a1aacfa3-bfa7-4253-9eb8-e34bfaf1fcb3/v3/classify?url=https://media-cdn.tripadvisor.com/media/photo-s/15/c5/a4/14/pepperoni-lovers.jpg&version=2018-03-19');
+    $response = http_request('https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/a1aacfa3-bfa7-4253-9eb8-e34bfaf1fcb3/v3/classify?url=https://www.biggerbolderbaking.com/wp-content/uploads/2019/07/15-Minute-Pizza-WS-Thumbnail.png&version=2018-03-19');
     $data = json_decode($response);
     $extraction = $data->images[0]->classifiers[0]->classes;
 
