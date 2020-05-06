@@ -1,6 +1,6 @@
 <?php
 
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/constants/food.php';
+    require_once 'constants/food.php';
 
     function http_request($url)
     {
@@ -32,15 +32,62 @@
         global $food;
         $i = 0;
         while($i < count($extraction)) {
-            if (in_array($extraction[$i]->class, $food)) {
+            if ($extraction[$i]->class == 'pizza') {
                 $result = $extraction[$i]->class;
                 $score = $extraction[$i]->score;
             break;
-            } else {
+            }
+            elseif ($extraction[$i]->class == 'noodle'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'hamburger'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            
+            elseif ($extraction[$i]->class == 'sandwich'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'stew'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'egg'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'hotdog'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'seafood'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            else {
                 $result = "Bukan Makanan";
                 $score = $extraction[$i]->score;
             }
             $i++;
+
+            // if (in_array($extraction[$i]->class, $food)) {
+            //     $result = $extraction[$i]->class;
+            //     $score = $extraction[$i]->score;
+            // break;
+            // } else {
+            //     $result = "Bukan Makanan";
+            //     $score = $extraction[$i]->score;
+            // }
+            // $i++;
         }
 
         $classification = [
