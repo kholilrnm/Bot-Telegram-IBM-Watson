@@ -1,5 +1,5 @@
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Bot-Telegram-IBM-Watson/constants/food.php';
+    require_once '../constants/food.php';
 
     function http_request($url)
     {
@@ -22,7 +22,7 @@
         return $result;
     }
 
-    $response = http_request('https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/a1aacfa3-bfa7-4253-9eb8-e34bfaf1fcb3/v3/classify?url=https://media-cdn.tripadvisor.com/media/photo-s/15/c5/a4/14/pepperoni-lovers.jpg&version=2018-03-19');
+    $response = http_request('https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/a1aacfa3-bfa7-4253-9eb8-e34bfaf1fcb3/v3/classify?url=https://www.cobsbread.com/drive/uploads/2018/02/Rainbow-Vegetable-Sandwich-850x630.jpg&version=2018-03-19');
     $data = json_decode($response);
     $extraction = $data->images[0]->classifiers[0]->classes;
 
