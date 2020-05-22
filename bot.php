@@ -32,10 +32,7 @@ $botman->hears("/check {url}", function (BotMan $bot, $url){
     require_once 'functions/IBM_API.php';
 
     $classification = classifyImage($url);
-
-    $message = "";
-    $message .= "Makanan tersebut adalah " . $classification->result . PHP_EOL;
-    $message .= "Akurasi " . $classification->score*100 . "%";
+    $message = getMessage($classification->result, $classification->score);
     $bot->reply($message);
 });
 
