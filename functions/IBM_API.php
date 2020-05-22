@@ -73,6 +73,36 @@
                 $score = $extraction[$i]->score;
             break;
             }
+            elseif ($extraction[$i]->class == 'pasta'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'french fries'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'bread'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'soup'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'ice cream'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }
+            elseif ($extraction[$i]->class == 'rice'){
+                $result = $extraction[$i]->class;
+                $score = $extraction[$i]->score;
+            break;
+            }                            
             else {
                 $result = "Bukan Makanan";
                 $score = $extraction[$i]->score;
@@ -89,7 +119,7 @@
             // }
             // $i++;
         }
-    
+
         $classification = [
             'result'    => $result,
             'score'     => $score

@@ -10,5 +10,17 @@
         'pie',
         'rice',
         'hotdog',
-        'seafood'
+        'seafood',
+        'cake',
+        'pasta',
+        'chicken',
+        'french fries',
+        'bread',
+        'cookies',
+        'beef',
+        'grilled',
+        'soup',
+        'ice cream',
+        'chocolate',
+        'pop corn'
     ];
