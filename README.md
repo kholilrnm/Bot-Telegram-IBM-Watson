@@ -3,35 +3,34 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/kholilboy/Aisyah-Bukan-Bot)
 
 ## STAR REPOSITORY Ini, Untuk Membantu Saya Dalam Meningkatkan Project Repo.
-- Kirim Pull Request Jika mau berkontribusi dalam project ini
+- Kirim pull request jika ingin berkontribusi dalam project ini
 - Kirim Issues, Jika ada permasalahan pada project ini
 
-## Aisyah Bukan BOT
+## Bot Food Visual Recognition 
 Proyek API Development
 
 ## Tools / Framework
 | Bagian | Tools yang digunakan |
 | --- | --- |
 | Back-End | Botman -> PHP |
-| Database | MySQL |
 | Web Server | Ngrok or Hosting |
 
 ## Demo BOT
-Via Telegram : @Aisyah_Bukan_Bot
+Via Telegram : @klasifikasi_makanan_bot
 
 <br>
 <p align="center">
-        <img src="/images/aisyah1.jpg" width="238" height="414">
+        <img src="/images/bot1.jpg" width="238" height="414">
 </p>
 
 <br>
 <p align="center">
-        <img src="/images/aisyah2.jpg" width="238" height="414">
+        <img src="/images/bot2.jpg" width="238" height="414">
 </p>
 
 <br>
 <p align="center">
-        <img src="/images/aisyah3.jpg" width="238" height="414">
+        <img src="/images/bot3.jpg" width="238" height="414">
 </p>
 <br>
 
